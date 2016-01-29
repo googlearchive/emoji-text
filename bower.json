@@ -1,6 +1,6 @@
 {
   "name": "emoji-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An element that inline translates text to emoji",
   "keywords": [
     "web-component",
