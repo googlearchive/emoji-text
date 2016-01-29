@@ -1,0 +1,34 @@
+{
+  "name": "emoji-text",
+  "description": "An element that inline translates text to emoji",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "emoji"
+  ],
+  "main": "emoji-text.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/PolymerLabs/emoji-text/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "emojilib": "muan/emojilib#master"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "fea4b23c15",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fea4b23c15dde67742a7b81a92941db337512f18"
+  },
+  "_source": "git://github.com/PolymerLabs/emoji-text.git",
+  "_target": "master",
+  "_originalSource": "PolymerLabs/emoji-text",
+  "_direct": true
+}

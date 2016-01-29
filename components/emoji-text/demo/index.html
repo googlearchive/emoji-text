@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>emoji-text Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../emoji-text.html">
+
+    <style>
+      body {
+        font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        background: #fff;
+        color: #535353;
+        margin: 0px;
+        padding: 50px;
+        overflow: auto;
+        font-size: 16px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: auto;
+      }
+
+      @media (max-width: 500px) {
+        body {
+          padding: 20px;
+        }
+      }
+
+      textarea {
+        width: 90%;
+        font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        height: 150px;
+        line-height: 24px;
+      }
+    </style>
+  </head>
+  <body unresolved>
+
+    <p>An example of <code>&lt;emoji-text&gt;</code>:</p>
+
+    <!-- demo -->
+    <div class="container">
+
+      <strong>Enter text to translate:</strong>
+
+      <template is="dom-bind">
+        <textarea id="input"></textarea>
+        <paper-input></paper-input>
+        <emoji-text id="translate"></emoji-text>
+      </template>
+
+      <emoji-text>I think my cat ate all of my cake and donuts.</emoji-text>
+
+      <emoji-text>Sorry I can't pay my rent this month. I bought an apple at the airport.</emoji-text>
+
+      <emoji-text>It's embarrassing that 95% of my Google history is just words I forgot how to spell.</emoji-text>
+
+    </div>
+
+    <script>
+      (function(){
+        document.addEventListener('WebComponentsReady', function(){
+          var input = document.querySelector('#input');
+          var translate = document.querySelector('#translate');
+
+          input.addEventListener('input', function(e) {
+            translate.text = input.value;
+          });
+        });
+      })();
+    </script>
+
+  </body>
+</html>
