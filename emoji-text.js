@@ -69,7 +69,10 @@ function getMeAnEmoji(keyword) {
         (keywords && keywords.indexOf(keyword) >= 0) ||
         (keywords && keywords.indexOf(maybeSingular) >= 0) ||
         (keywords && keywords.indexOf(maybePlural) >= 0))
-      return allEmojis[emoji].char;
+    {
+      if(allEmojis[emoji].char)  
+        return allEmojis[emoji].char;
+    }    
   }
   return '';
 };
